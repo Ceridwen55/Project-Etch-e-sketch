@@ -19,6 +19,7 @@ madre.style.width = "950px";
 madre.style.height = "800px";
 
 
+// GRID
 let div1 = "";
 let div = div1;
 
@@ -29,6 +30,7 @@ let div = div1;
 {
     div1 = document.createElement("div");
     div1.style.display = "flex";
+    div1.classList.add('cell');
     div1.style.margin = "0px";
     div1.style.width = "50px";
     div1.style.height = "50px";
@@ -54,8 +56,30 @@ function sketch (event)
     let change = event.target.style.backgroundColor = randomColor;
     return change
     
-    
-    
-
        
 }
+// BUTTON
+const butwrap = document.querySelector(".butwrap");
+butwrap.style.display = "flex";
+butwrap.style.alignItems = "center"
+butwrap.style.justifyContent = "center";
+butwrap.style.marginBottom = "-60px";
+
+
+const resBut = document.querySelector("button");
+resBut.style.border = "bold";
+resBut.style.fontStyle = "bold";
+resBut.style.fontSize = "15px";
+resBut.style.width = "100px";
+resBut.style.height = "100px";
+resBut.style.alignItems = "top";
+
+function reset (event)
+{   
+    
+    let res = document.querySelectorAll(".cell");
+  return  res.forEach(cell =>{cell.style.backgroundColor = "grey";});   
+}
+
+
+resBut.addEventListener('click',reset);
