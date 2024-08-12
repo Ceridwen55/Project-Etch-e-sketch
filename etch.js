@@ -22,32 +22,40 @@ madre.style.height = "800px";
 let div1 = "";
 let div = div1;
 
-for (i = 0; i < 256; i++)
+
+
+
+    for (i = 0; i < 256; i++)
 {
-div1 = document.createElement("div");
-div1.style.display = "flex";
-div1.style.margin = "0px";
-div1.style.width = "50px";
-div1.style.height = "50px";
-div1.style.backgroundColor = "grey";
-function sketch (event)
-{   let randomColor = "";
-    let letters = ['#ff0000', '#00ff00', '#0000ff'];
-    for (j = 0; j < 3; j++)
-    {
-
-        randomColor = letters[Math.floor(Math.random() * 3)];
-        return event.target.style.backgroundColor = randomColor; 
-
-    }
+    div1 = document.createElement("div");
+    div1.style.display = "flex";
+    div1.style.margin = "0px";
+    div1.style.width = "50px";
+    div1.style.height = "50px";
+    div1.style.backgroundColor = "grey";
+    div1.addEventListener('mouseenter', sketch);
+    madre.appendChild(div1);
     
 }
-div1.addEventListener('mouseenter', sketch);
-madre.appendChild(div1);
 
+
+
+
+
+function sketch (event)
+{   
+    
+    let randomColor = "";
+    let letters = ['#ff0000', '#00ff00', '#0000ff'];
+
+
+    randomColor = letters[Math.floor(Math.random()* 3)];
+        
+    let change = event.target.style.backgroundColor = randomColor;
+    return change
+    
+    
+    
+
+       
 }
-
-
-
-
-
