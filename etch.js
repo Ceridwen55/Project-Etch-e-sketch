@@ -1,10 +1,32 @@
 const body = document.body;
 
+
+let senior = document.querySelector(".gramp");
+senior.style.display = "flex";
+senior.style.justifyContent = "center";
+senior.style.alignItems = "center";
+senior.style.paddingTop = "-150px";
+senior.style.backgroundColor = "ivory";
+
+
+
+
 let padre = document.querySelector(".dad");
 padre.style.display = "flex";
+padre.style.flexDirection = "column";
+padre.style.gap ="50px";
 padre.style.alignItems = "center";
-padre.style.justifyContent = "center";
-padre.style.paddingTop = "175px";
+padre.style.justifyContent = "space-between";
+padre.style.paddingTop = "75px";
+padre.style.backgroundColor = "orange";
+padre.style.paddingBottom = "200px";
+padre.style.marginTop = "50px";
+padre.style.border = "dashed";
+padre.style.borderRadius = "78px";
+padre.style.boxShadow = "inset 15px 15px 15px yellow"
+
+padre.style.width ="1200px";
+padre.style.height = "900px";
 
 
 
@@ -59,19 +81,19 @@ function sketch (event)
        
 }
 // BUTTON
-const butwrap = document.querySelector(".butwrap");
-butwrap.style.display = "flex";
-butwrap.style.alignItems = "center"
-butwrap.style.justifyContent = "center";
-butwrap.style.marginBottom = "-60px";
+
 
 
 const resBut = document.querySelector("button");
-resBut.style.border = "bold";
-resBut.style.fontStyle = "bold";
-resBut.style.fontSize = "15px";
-resBut.style.width = "100px";
-resBut.style.height = "100px";
+resBut.style.border = "dotted";
+resBut.style.borderRadius = "10px";
+resBut.style.fontFamily ="fantasy";
+resBut.style.fontStyle = "italic";
+resBut.style.boxShadow = "5px 5px 5px silver";
+resBut.style.fontSize = "35px";
+resBut.style.fontWeight = "bold";
+resBut.style.width = "200px";
+resBut.style.height = "auto";
 resBut.style.alignItems = "top";
 
 function reset (event)
@@ -81,5 +103,21 @@ function reset (event)
   return  res.forEach(cell =>{cell.style.backgroundColor = "grey";});   
 }
 
-
 resBut.addEventListener('click',reset);
+
+
+// BY
+let nama = document.createElement("p");
+
+nama.textContent = "Etch-e-Sketch by Zulkan";
+nama.style.fontFamily = "fantasy"
+nama.style.color = "white";
+nama.style.fontStyle = "italic";
+nama.style.fontWeight = "bold";
+nama.style.textShadow = " 10px 10px 10px black";
+nama.style.fontSize = "45px";
+nama.style.marginTop = "80px";
+padre.appendChild(nama);
+
+
+
